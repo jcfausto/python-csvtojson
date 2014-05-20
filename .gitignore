@@ -1,3 +1,4 @@
 *.db
 *.pyc
 input*
+output.json
