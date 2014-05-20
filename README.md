@@ -34,6 +34,14 @@ All you need to to is to edit "resources.py" and:
 
 Run the script again and you should get your desired results. 
 
++++++++
+Tests
++++++++
+
+You should run the test before use the script. 
+
+Pyton tests.py
+
 Feel free to contribute (look at the TO-DO below), comment or to open issues.
 
 +++++++
