@@ -4,7 +4,7 @@ python-csvtojson
 
 Given a CSV file, it converts each row into a json formated row and outputs each row intto an output file.
 
-Supose you have a CSV file called **input.csv** and with content like this?
+Supose you have a CSV file called **input.csv** and with content like this:
 
 "foo.bar","1.5.22","system","True",2014-05-12 16:55:18,2014-05-12 16:59:21,1800-01-01 00:00:01,0
 
