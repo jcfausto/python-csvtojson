@@ -2,6 +2,8 @@
 python-csvtojson
 ================
 
+Python V2.6
+
 Given a CSV file, it converts each row into a json formated row and outputs each row intto an output file.
 
 Supose you have a CSV file called **input.csv** and with content like this:
