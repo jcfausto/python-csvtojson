@@ -40,7 +40,8 @@ Tests
 
 You should run the test before use the script. 
 
-Pyton tests.py
+Python pycsvtojsonTests.py
+Python translatorTests.py
 
 Feel free to contribute (look at the TO-DO below), comment or to open issues.
 
