@@ -38,7 +38,7 @@ Run the script again and you should get your desired results.
 Tests
 +++++++
 
-You should run the test before use the script. 
+You should run the test before using the script. 
 
 Python pycsvtojsonTests.py
 Python translatorTests.py
