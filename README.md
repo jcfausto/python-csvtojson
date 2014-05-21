@@ -2,7 +2,8 @@
 python-csvtojson
 ================
 
-Python V2.6
+### Status
+[![Build Status](https://travis-ci.org/jcfausto/python-csvtojson.svg?branch=master)](https://travis-ci.org/jcfausto/python-csvtojson)
 
 Given a CSV file, it converts each row into a json formated row and outputs each row intto an output file.
 
