@@ -2,6 +2,7 @@
 from __future__ import print_function
 # regular imports
 import sys
+import traceback
 import csv
 import json
 from resources import FIELDNAMES, DICTIONARIES
@@ -56,11 +57,12 @@ class Pycsvtojson:
 			if verbose: print("Output generated")
 
 			if verbose: print("SUCCESS!")
+			
 		except KeyboardInterrupt:
-			print("OK! As you wish.")
-		except:
-			print("Unexpected error: " + sys.exc_info()[0])
+			print("OK! As you wish. KeyboardInterrupt signal detected.")
+		except Exception:			
+			print("Unexpected error: " + traceback.format_exc())
+			
 
-if __name__ == "__main__":
-	oCsv = Pycsvtojson()
-	oCsv.execute(sys.argv[1:])
+if __name__ == "__main__":	
+	sys.exit(Pycsvtojson().execute(sys.argv[1:]))
