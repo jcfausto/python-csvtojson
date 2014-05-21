@@ -3,6 +3,7 @@ from __future__ import print_function
 # regular imports
 import sys
 import traceback
+import gc
 import csv
 import json
 from resources import FIELDNAMES, DICTIONARIES
@@ -12,6 +13,9 @@ class Pycsvtojson:
 
 	def execute(self, argv):
 		try: 
+			collected = gc.collect()
+			print("GCINIT:: Garbage collector: collected %d objects." % (collected))
+
 			verbose = False
 
 			if len(argv) > 1:
@@ -62,7 +66,11 @@ class Pycsvtojson:
 			print("OK! As you wish. KeyboardInterrupt signal detected.")
 		except Exception:			
 			print("Unexpected error: " + traceback.format_exc())
-			
+		finally:
+			collected = gc.collect()
+			print("GCEND :: Garbage collector: collected %d objects." % (collected))		
 
-if __name__ == "__main__":	
-	sys.exit(Pycsvtojson().execute(sys.argv[1:]))
+# main thread
+if __name__ == "__main__":
+	result = Pycsvtojson().execute(sys.argv[1:])    
+	sys.exit(result)

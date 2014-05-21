@@ -66,3 +66,7 @@ Any questions drop me a line!
 
 1. Organize the tests
 2. Improve the main method in order to add more robustness
+
+#### References
+
+- Garbage Collection: http://www.digi.com/wiki/developer/index.php/Python_Garbage_Collection
