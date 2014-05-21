@@ -5,50 +5,64 @@ python-csvtojson
 ### Status
 [![Build Status](https://travis-ci.org/jcfausto/python-csvtojson.svg?branch=master)](https://travis-ci.org/jcfausto/python-csvtojson)
 
-Given a CSV file, it converts each row into a json formated row and outputs each row intto an output file.
+Given a CSV file, this module converts each row into a row with json format and outputs them to an output file
 
-Supose you have a CSV file called **input.csv** and with content like this:
+Supose you have a CSV file called **input.csv** with content like this:
 
+```
 "foo.bar","1.5.22","system","True",2014-05-12 16:55:18,2014-05-12 16:59:21,1800-01-01 00:00:01,0
+```
 
 The columns for this CSV are:
+
+```
 "USER", "VERSION", "SYSTEM", "FULLBUILD", "STARTTIME", "ENDTIME", "DURATION", "STATUS"
+```
 
-So, all you need to do is to edit "resources.py" and:
+So, all you need to do is to edit **resources.py** and add this columns to ***FIELDNAMES*** dictionary.
 
-1. Add to "FIELDNAMES" this columns.
+At this point you are ready to go. 
 
-You are ready to go. 
+Go to your command prompt/terminal and type: 
 
-Go to your command prompt/terminal and type: Python pycsvtojson.py input.csv
+```
+Python pycsvtojson.py input.csv
+```
 
-You will notice that a file called **output.json** was created with the parsed data.
+You will notice that a file called **output.json** will be created with the parsed data.
 
-** Translate CSV column values when creating the json record **
+### Translate CSV column values when creating the json record
 
-Supose you want to replace the values in "FULLBUILD" to other values in your json record.
+Supose you want to replace the values that the "FULLBUILD" column have by other values in your json parsed record.
 
-All you need to to is to edit "resources.py" and:
+All you need to to is to edit **resources.py** and do the following:
 
-1. Create a dictionary containning your key/value pairs, where key is the "value" in "FULLBUILD" column to be replaced with "value"
-2. Add this dictionary to "DICTIONARIES" linked with the column that it represents. i.e: DICTIONARIES = {"FULLBUILD": FULLBUILD_DICT}
+1. Create a dictionary containning your *key/value* pairs, where *key* is the "value" in "FULLBUILD" column that you want to translate to a value.
 
-Run the script again and you should get your desired results. 
+2. Add this dictionary to **DICTIONARIES** linked with the column that it represents and for wich it will be the base for translation. Example: DICTIONARIES = {"FULLBUILD": FULLBUILD_DICT}
 
-+++++++
-Tests
-+++++++
+Run the script again and you should get your desired results in the output file.
 
-You should run the test before using the script. 
 
-Python pycsvtojsonTests.py
-Python translatorTests.py
+### Tests
 
-Feel free to contribute (look at the TO-DO below), comment or to open issues.
+You could run the tests locally before using the script by typing: 
 
-+++++++
-TO-DO
-+++++++
+- Python pycsvtojsonTests.py
+
+- Python translatorTests.py
+
+If you have *nose* you just need to type *nosetests* and all tests will run.
+
+### License
+
+Feel free to use all the code here as you like.
+
+Would you like to contribute? Feel free too! :-) 
+
+Any questions drop me a line!
+
+### TO-DO
 
 1. Organize the tests
 2. Improve the main method in order to add more robustness
