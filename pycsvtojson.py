@@ -56,8 +56,10 @@ class Pycsvtojson:
 			if verbose: print("Output generated")
 
 			if verbose: print("SUCCESS!")
+		except KeyboardInterrupt:
+			print("OK! As you wish.")
 		except:
-			print("FAIL")
+			print("Unexpected error: " + sys.exc_info()[0])
 
 if __name__ == "__main__":
 	oCsv = Pycsvtojson()
