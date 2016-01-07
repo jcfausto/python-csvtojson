@@ -1,6 +1,6 @@
 import unittest
 
-from translator.translator import Translator
+from app.translator.translator import Translator
 
 
 class TranslatorTests(unittest.TestCase):

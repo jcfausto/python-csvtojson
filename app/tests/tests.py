@@ -1,5 +1,6 @@
+from app.translator.tests.translatorTests import TranslatorTests
 from pycsvtojsonTests import PycsvtojsonTests
-from translator.tests.translatorTests import TranslatorTests
+
 
 def main():
 	test1 = PycsvtojsonTests()

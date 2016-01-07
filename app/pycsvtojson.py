@@ -7,7 +7,7 @@ import gc
 import csv
 import json
 from resources import FIELDNAMES, DICTIONARIES
-from translator.translator import Translator
+from app.translator.translator import Translator
 
 class Pycsvtojson:
 
