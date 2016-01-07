@@ -1,5 +1,7 @@
 import unittest
-from pycsvtojson import Pycsvtojson
+
+from app.pycsvtojson import Pycsvtojson
+
 
 class PycsvtojsonTests(unittest.TestCase):
 
