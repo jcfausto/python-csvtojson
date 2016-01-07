@@ -64,8 +64,11 @@ Any questions drop me a line!
 
 ### TO-DO
 
-1. Organize the tests
-2. Improve the main method in order to add more robustness
+1. Create a folder structure
+2. Use pinocchio for tests
+3. Replace the "verbose" thing with an appropriate lob library
+4. Improve the main method in order to add more robustness
+
 
 #### References
 
